@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Button, Col, Container, Form, Dropdown, Row, InputGroup } from "react-bootstrap";
+import { Col, Container, Form, Dropdown, Row, InputGroup } from "react-bootstrap";
 import { Search } from "react-bootstrap-icons";
 import FilmService from "../Services/FilmService";
 
 const Searchbar = ({ genres, setSelectedGenre, selectedGenre, keywords, setKeywords ,onGenreClick}) => {
-  const [films, setFilms] = useState([]);
-  const [page,setPage]=useState()
+  const [, setFilms] = useState([]);
+  const [page]=useState()
 
   useEffect(() => {
     const fetchFilmsByGenre = async () => {

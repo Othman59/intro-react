@@ -9,10 +9,10 @@ const Films = () => {
   const [films, setFilms] = useState([]);
   const [loading, setLoading] = useState(true);
   const [page] = useState(1);
-  const [currentPage, setCurrentPage] = useState(1);
-  const[maxPage,setMaxPage] = useState(500)
-  const [totalPages, setTotalPages] = useState();
-  const [firstPage, setFirstPage] = useState(1);
+  const [currentPage] = useState(1);
+  const[,setMaxPage] = useState(500)
+  const [, setTotalPages] = useState();
+  const [, setFirstPage] = useState(1);
   // eslint-disable-next-line no-unused-vars
   const [selectedGenre, setSelectedGenre] = useState(""); // New state for the selected genre
   const [genres,setGenres] = useState([]);
@@ -85,6 +85,7 @@ useEffect(() => {
   setLoading(true);
   fetchFilm();
   }
+// eslint-disable-next-line react-hooks/exhaustive-deps
 }, [currentPage, keywords]);
 
 
